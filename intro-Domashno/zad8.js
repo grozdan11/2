@@ -1,5 +1,7 @@
-function solve(bottles, capacity) {
-    console.log(Math.ceil(bottles / capacity));
+function calculateBoxes(input) {
+    let bottles = Number(input[0]); 
+    let capacity = Number(input[1]); 
+    let boxesNeeded = Math.ceil(bottles / capacity); 
+    console.log(boxesNeeded);
 }
-
-solve(20, 5)
+calculateBoxes([5, 10]); 
