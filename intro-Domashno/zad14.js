@@ -1,11 +1,10 @@
-function solve(arr) {
+function personalInfo(...parameeters) {
     let obj = {};
-    obj[arr[0]] = arr[1];
-    obj[arr[2]] = arr[3];
-    obj[arr[4]] = arr[5];
-
-    console.log(obj);
-    
+    for (let i = 0; i < parameeters.length; i += 2) {
+        let key = parameeters[i];
+        let value = parameeters[i + 1];
+        obj[key] = value;
+    }
+    return obj;
 }
-
-solve(['name', 'Ico', 'age', '24', 'gender', 'male'])
+console.log(personalInfo("name", "Grozdan", "age", 25, "gender", "male"));
