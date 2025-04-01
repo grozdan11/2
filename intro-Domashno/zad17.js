@@ -1,5 +1,5 @@
-function solve(sentance) {
-    console.log(sentance.toUpperCase().match(/\w+/g).join(", "));  
+function upperCase(text){
+let upperCase = text.toUpperCase();
+console.log(upperCase)
 }
-
-solve('Hi, how are you?')
+upperCase('how are you?')
