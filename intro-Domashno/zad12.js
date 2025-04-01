@@ -1,14 +1,10 @@
-function solve(num) {
-    if (num <= 1) console.log("No");
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-      if (num % i === 0) {
-        console.log("No");
-      }
+function check(num){
+    let number = parseFloat(num)
+    if(number%10 == 0 && number%2==0){
+        console.log(`Въведеното число ${number} е сложно.`)
+    } else{
+        console.log(`Въведеното число ${number} е просто.`)
     }
-    console.log("Yes");
 }
 
-solve(2);
-solve(3);
-solve(4);
-solve(5);
+check(10)
