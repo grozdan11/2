@@ -1,11 +1,14 @@
-function solve(num) {
-    if (num % 2 == 0) {
-        console.log("even");
+function checkNumber(input) {
+    if (!Number.isInteger(input)) {
+        return "invalid"
+    }
+
+    if (input % 2 === 0) {
+        return "even"
     } else {
-        console.log("odd");
+        return "odd"
     }
 }
-
-solve(2);
-solve(3);
-solve(-2);
+console.log(checkNumber(3))
+console.log(checkNumber(4))
+console.log(checkNumber(7.7))
