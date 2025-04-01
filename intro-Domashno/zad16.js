@@ -1,21 +1,32 @@
-function solve(arr) {
-    let operator = arr.pop();
-    let [numOne, numTwo] = arr.map(Number);
+function calculate([a, b, operator]) {
+    let num1 = Number(a)
+    let num2 = Number(b)
 
-    if (operator == "*") {
-        console.log(numOne * numTwo);
-    } else if (operator == "+") {
-        console.log(numOne + numTwo);
-    } else if (operator == "-") {
-        console.log(numOne - numTwo);
-    } else if (operator == "/") {
-        console.log(numOne / numTwo);
-    } else {
-        console.log("Invalid operator");   
+    let result
+
+    switch (operator) {
+        case '+':
+            result = num1 + num2
+            break
+        case '-':
+            result = num1 - num2
+            break
+        case '*':
+            result = num1 * num2
+            break
+        case '/':
+            result = num1 / num2
+            break
+        default:
+            console.log("Invalid operator")
+            return
     }
 
+    console.log(result)
 }
+calculate(['20', '-11', '*'])
+calculate(['1', '10', '+'])
+calculate(['6', '7', '/'])
+calculate(['3', '5', '-'])
+calculate(['test', '-4', 'text'])
 
-solve(["2", "3", "*"]);
-solve(["18", "-1", "*"]);
-solve(["14", "-4", "-"]);
